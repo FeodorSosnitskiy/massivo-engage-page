@@ -37,23 +37,23 @@ export const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-32 px-6">
+    <section id="faq" className="py-32 px-6 bg-muted/30">
       <div className="container mx-auto max-w-4xl">
-        <div className="text-center mb-20 animate-fade-in">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">{t("faqTitle")}</h2>
+        <div className="text-center mb-24 animate-fade-in">
+          <h2 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight">{t("faqTitle")}</h2>
         </div>
 
-        <Accordion type="single" collapsible className="space-y-4 animate-fade-in-up">
+        <Accordion type="single" collapsible className="space-y-3 animate-fade-in-up">
           {faqs.map((faq, index) => (
             <AccordionItem
               key={index}
               value={`item-${index}`}
-              className="border border-border rounded-xl px-6 bg-card"
+              className="border border-border rounded-lg px-6 bg-card"
             >
-              <AccordionTrigger className="text-left hover:no-underline text-lg font-semibold">
+              <AccordionTrigger className="text-left hover:no-underline text-base font-semibold py-5">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
+              <AccordionContent className="text-muted-foreground text-sm leading-relaxed pb-5">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>

@@ -1,75 +1,40 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Upload, Send, BarChart3 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import heroDashboard from "@/assets/hero-dashboard.jpg";
+import heroMinimal from "@/assets/hero-minimal.png";
 
 export const Hero = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="pt-32 pb-20 px-6 min-h-screen flex items-center">
-      <div className="container mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+    <section className="pt-40 pb-32 px-6 min-h-screen flex items-center">
+      <div className="container mx-auto max-w-7xl">
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
           <div className="space-y-8 animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight text-balance">
+            <h1 className="text-6xl md:text-7xl font-bold leading-[1.1] text-balance tracking-tight">
               {t("heroTitle")}
-              <br />
-              <span className="bg-hero-gradient bg-clip-text text-transparent">
-                {t("heroSubtitle")}
-              </span>
             </h1>
 
-            <div className="space-y-4 text-lg text-muted-foreground">
-              <div className="flex items-center space-x-3">
-                <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary font-semibold">
-                  1
-                </div>
-                <span>{t("heroStep1")}</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary font-semibold">
-                  2
-                </div>
-                <span>{t("heroStep2")}</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary font-semibold">
-                  3
-                </div>
-                <span>{t("heroStep3")}</span>
-              </div>
-            </div>
+            <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed max-w-xl">
+              {t("heroSubtitle")}
+            </p>
 
-            <Button
-              size="lg"
-              className="bg-hero-gradient hover:opacity-90 transition-all text-lg px-8 py-6 shadow-elegant group"
-            >
-              {t("heroCTA")}
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-
-            <div className="flex items-center space-x-8 pt-4">
-              <div className="flex items-center space-x-2">
-                <Upload className="h-5 w-5 text-primary" />
-                <span className="text-sm text-muted-foreground">Easy Upload</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Send className="h-5 w-5 text-accent" />
-                <span className="text-sm text-muted-foreground">Auto Send</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <BarChart3 className="h-5 w-5 text-primary" />
-                <span className="text-sm text-muted-foreground">Deep Analytics</span>
-              </div>
+            <div className="pt-4">
+              <Button
+                size="lg"
+                className="bg-foreground text-background hover:bg-foreground/90 transition-all text-base px-8 py-6 rounded-lg group"
+              >
+                {t("heroCTA")}
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
             </div>
           </div>
 
-          <div className="relative animate-fade-in-up">
-            <div className="absolute inset-0 bg-hero-gradient opacity-20 blur-3xl rounded-full"></div>
+          <div className="relative animate-fade-in-up flex justify-end">
             <img
-              src={heroDashboard}
-              alt="EmailMassivo Dashboard"
-              className="relative rounded-2xl shadow-2xl border border-border hover:scale-105 transition-transform duration-500"
+              src={heroMinimal}
+              alt="EmailMassivo Illustration"
+              className="w-full max-w-2xl"
             />
           </div>
         </div>

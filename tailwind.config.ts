@@ -53,8 +53,9 @@ export default {
         'glass': 'linear-gradient(135deg, hsl(var(--glass-bg)), hsl(var(--glass-bg)))',
       },
       boxShadow: {
-        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.15)',
-        'elegant': '0 10px 30px -10px hsl(var(--primary) / 0.3)',
+        'glass': '0 4px 16px 0 rgba(0, 0, 0, 0.04)',
+        'elegant': '0 2px 8px 0 rgba(0, 0, 0, 0.06)',
+        'minimal': '0 1px 3px 0 rgba(0, 0, 0, 0.05)',
       },
       borderRadius: {
         lg: "var(--radius)",

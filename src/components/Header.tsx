@@ -20,11 +20,11 @@ export const Header = () => {
 
   return (
     <header className="fixed top-0 w-full z-50 glass-effect border-b">
-      <nav className="container mx-auto px-6 py-4">
+      <nav className="container mx-auto px-6 py-5 max-w-7xl">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <Mail className="h-8 w-8 text-primary" />
-            <span className="text-2xl font-bold bg-hero-gradient bg-clip-text text-transparent">
+            <Mail className="h-6 w-6 text-foreground" />
+            <span className="text-xl font-bold text-foreground tracking-tight">
               EmailMassivo
             </span>
           </div>
@@ -32,35 +32,35 @@ export const Header = () => {
           <div className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection("features")}
-              className="text-foreground hover:text-primary transition-colors"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               {t("features")}
             </button>
             <button
               onClick={() => scrollToSection("pricing")}
-              className="text-foreground hover:text-primary transition-colors"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               {t("pricing")}
             </button>
             <button
               onClick={() => scrollToSection("testimonials")}
-              className="text-foreground hover:text-primary transition-colors"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               {t("testimonials")}
             </button>
             <button
               onClick={() => scrollToSection("faq")}
-              className="text-foreground hover:text-primary transition-colors"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               {t("faq")}
             </button>
           </div>
 
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-3">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Globe className="h-5 w-5" />
+                <Button variant="ghost" size="icon" className="h-9 w-9">
+                  <Globe className="h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="bg-popover">
@@ -76,15 +76,15 @@ export const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <Button variant="ghost" size="icon" onClick={toggleTheme}>
+            <Button variant="ghost" size="icon" onClick={toggleTheme} className="h-9 w-9">
               {theme === "light" ? (
-                <Moon className="h-5 w-5" />
+                <Moon className="h-4 w-4" />
               ) : (
-                <Sun className="h-5 w-5" />
+                <Sun className="h-4 w-4" />
               )}
             </Button>
 
-            <Button className="bg-hero-gradient hover:opacity-90 transition-opacity">
+            <Button className="bg-foreground text-background hover:bg-foreground/90 transition-colors text-sm px-5 h-9 rounded-lg">
               {t("getStarted")}
             </Button>
           </div>
